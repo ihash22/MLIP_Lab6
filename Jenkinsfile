@@ -17,12 +17,15 @@ pipeline {
 
                 # TODO fill out the path to conda here
                 # sudo /PATH/TO/CONDA init
+                sudo /var/lib/jenkins/miniconda3/bin/conda init
 
                 # TODO Complete the command to run pytest
                 # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
+                sudo /var/lib/jenkins/miniconda3/bin/conda run -n pytests python -m pytest
 
-                echo 'pytest not runned'
-                exit 1 #comment this line after implementing Jenkinsfile
+                echo 'pytest completed'
+                #echo 'pytes t not runned'
+                #exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
             }
